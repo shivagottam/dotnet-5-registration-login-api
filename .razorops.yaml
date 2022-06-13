@@ -1,9 +1,10 @@
 tasks:
   build-deps:
-    runner: razorci/ruby
+    runner: razorci/openjdk:11-buster
     steps:
     - checkout
     - commands:
+      - |
       dotnet sonarscanner begin "dotnet" 
       /d:sonar.host.url="http://13.233.98.144:9000"  
       /d:sonar.login=${TOKEN}
