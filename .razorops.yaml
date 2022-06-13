@@ -4,7 +4,7 @@ tasks:
     steps:
     - checkout
     - commands:
-      dotnet sonarscanner begin /k:"dotnet" 
+      dotnet sonarscanner begin "dotnet" 
       /d:sonar.host.url="http://13.233.98.144:9000"  
       /d:sonar.login=${TOKEN}
       dotnet build
